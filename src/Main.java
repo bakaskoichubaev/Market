@@ -1,9 +1,8 @@
 import JAVA8.classes.Market;
 import JAVA8.classes.Person;
 import JAVA8.products.*;
-import JAVA8.services.MarketServicesAble;
+import JAVA8.services.MarketServicesImpl;
 import JAVA8.services.PersonServicesImpl;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +11,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        MarketServicesAble marketServicesAble = new MarketServicesAble();
+        MarketServicesImpl marketServicesAble = new MarketServicesImpl();
         PersonServicesImpl personServices = new PersonServicesImpl();
         Person person = new Person("AMAN",30300);
+        Person person2 = new Person("OSMON",5263);
         Market market = new Market("Amazon"," MARKET  24/7",170000,"+996707658666");
         List<BakeryProducts>bakeryProducts = new ArrayList<>(List.of(
                 new BakeryProducts("CAKE",20,LocalDate.now(),
@@ -25,9 +25,9 @@ public class Main {
         marketServicesAble.createBaker(bakeryProducts);
         List<ChildrenFood>childrenFoods = new ArrayList<>(List.of(
                 new ChildrenFood ("DIAPERS",450,LocalDate.of(2022,11,4),
-                        "huggies","5",100),
+                        "huggies","KG",100),
                 new ChildrenFood("WETWIPES",203,LocalDate.of(2022,12,3),
-                        "G&H","gentle",130)
+                        "G&H","JAPAN",130)
         ));
         marketServicesAble.createChil(childrenFoods);
         List<SeaFood>seafoods= new ArrayList<>(List.of(
@@ -115,6 +115,7 @@ public class Main {
                     break;
                 case 8:
                     System.out.println(person);
+                    System.out.println(person2);
                     break;
                 case 9:
                     System.out.println(market);

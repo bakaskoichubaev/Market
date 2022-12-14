@@ -19,15 +19,14 @@ public class PersonServicesImpl {
                     this.productSkid.add(product1.getDiscount());
                     market.setBank(market.getBank()+product1.getDiscount());
                     person.setBancAccount(person.getBancAccount()-product1.getDiscount());
-                    return "ВЫ ОТПРАВИЛИ В КОРЗИНУ ЭТОТ ТОВАР";
+                    return "YOU TOOK THIS PRODUCT";
                 }else {
-                    return "У ВАС НЕ ДОСТАТОЧНО ДЕНЕГ";
+                    return "YOU DON'T HAVE MUCH MONEY";
                 }
-            }else {
-                return "НЕТ ТАКОГО ПРОДУКТА";
+
             }
         }
-        return "ТАКОЙ ТОВАР ЕСТЬ";
+        return "NULL";
     }
     public String createProductsBaker(String product, List<BakeryProducts>products, Person person, Market market ){
         for (Products product1 : products) {
@@ -37,15 +36,14 @@ public class PersonServicesImpl {
                     this.productSkid.add(product1.getPrice());
                     market.setBank(market.getBank()+product1.getPrice());
                     person.setBancAccount(person.getBancAccount()-product1.getPrice());
-                    return "ВЫ ОТПРАВИЛИ В КОРЗИНУ ЭТОТ ТОВАР";
+                    return "YOU TOOK THIS PRODUCT";
                 }else {
-                    return "У ВАС НЕ ДОСТАТОЧНО ДЕНЕГ";
+                    return "YOU DON'T HAVE MUCH MONEY";
                 }
-            }else {
-                return "НЕТ ТАКОГО ПРОДУКТА";
+
             }
         }
-        return "ТАКОЙ ТОВАР ЕСТЬ";
+        return "NULL";
     }
 
     public String createProductsSeaFood(String product, List<SeaFood>products, Person person, Market market ){
@@ -56,15 +54,14 @@ public class PersonServicesImpl {
                     market.setBank(market.getBank()+product1.getSkidka());
                     this.productSkid.add(product1.getSkidka());
                     person.setBancAccount(person.getBancAccount()-product1.getSkidka());
-                    return "ВЫ ОТПРАВИЛИ В КОРЗИНУ ЭТОТ ТОВАР";
+                    return "YOU TOOK THIS PRODUCT";
                 }else {
-                    return "У ВАС НЕ ДОСТАТОЧНО ДЕНЕГ";
+                    return "YOU DON'T HAVE MUCH MONEY";
                 }
-            }else {
-                return "НЕТ ТАКОГО ПРОДУКТА";
+
             }
         }
-        return "ТАКОЙ ТОВАР ЕСТЬ";
+        return "NULL";
     }
     public String createProductsSportFood(String product, List<SportFood>products, Person person, Market market ){
         for (Products product1 : products) {
@@ -74,15 +71,14 @@ public class PersonServicesImpl {
                     this.productSkid.add(product1.getPrice());
                     market.setBank(market.getBank()+product1.getPrice());
                     person.setBancAccount(person.getBancAccount()-product1.getPrice());
-                    return "ВЫ ОТПРАВИЛИ В КОРЗИНУ ЭТОТ ТОВАР";
+                    return "YOU TOOK THIS PRODUCT";
                 }else {
-                    return "У ВАС НЕ ДОСТАТОЧНО ДЕНЕГ";
+                    return "YOU DON'T HAVE MUCH MONEY";
                 }
-            }else {
-                return "НЕТ ТАКОГО ПРОДУКТА";
+
             }
         }
-        return "ТАКОЙ ТОВАР ЕСТЬ";
+        return "NULL";
     }
 
     public String createProductsVegetables(String product, List<Vegetables>products, Person person, Market market ){
@@ -93,15 +89,14 @@ public class PersonServicesImpl {
                     this.productSkid.add(product1.getPrice());
                     market.setBank(market.getBank()+product1.getPrice());
                     person.setBancAccount(person.getBancAccount()-product1.getPrice());
-                    return "ВЫ ОТПРАВИЛИ В КОРЗИНУ ЭТОТ ТОВАР";
+                    return "YOU TOOK THIS PRODUCT";
                 }else {
-                    return "У ВАС НЕ ДОСТАТОЧНО ДЕНЕГ";
+                    return "YOU DON'T HAVE MUCH MONEY";
                 }
-            }else {
-                return "НЕТ ТАКОГО ПРОДУКТА";
+
             }
         }
-        return "ТАКОЙ ТОВАР ЕСТЬ";
+        return "NULL";
     }
     public List<Products>getMyProducts(){
         return this.products;
@@ -120,8 +115,8 @@ public class PersonServicesImpl {
         System.out.println("НАЗВАНИЕ МАРКЕТА : "+ market.getName());
         System.out.println("ИМЯ ЧЕЛОВЕКА "+person.getName());
         System.out.println(this.products);
-        System.out.println("ОБЩАЯ ЦЕНА  "+skid);
-        System.out.println("ЦЕНА ПОСЛЕ СКИДКИ : "+total);
+        System.out.println("TOTAL PRICE  "+skid);
+        System.out.println("PRICE AFTER DISCOUNT : "+total);
         System.out.println("    ");
 
 
